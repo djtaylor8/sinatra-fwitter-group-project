@@ -1,0 +1,11 @@
+<% if flash.has?(:message) %>
+  <%= flash[:message] %>
+<% end %> 
+
+<h1>Welcome, tweeting!</h1>
+<ul>
+<% @tweets.each do |tweet| %>
+    <a href="/tweets/<%= tweet.id %>"><li><%= tweet.content %></li></a>
+<% end %>
+</ul>
+
